@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/User/Documents/GitHub/practices-/pract12_13_14/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\12_pract.dir\\main.c.obj -c C:\\Users\\User\\Documents\\GitHub\\practices-\\pract12_13_14\\main.c",
+  "file": "C:/Users/User/Documents/GitHub/practices-/pract12_13_14/main.c",
+  "output": "CMakeFiles/12_pract.dir/main.c.obj"
+},
+{
+  "directory": "C:/Users/User/Documents/GitHub/practices-/pract12_13_14/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\12_pract.dir\\stack.c.obj -c C:\\Users\\User\\Documents\\GitHub\\practices-\\pract12_13_14\\stack.c",
+  "file": "C:/Users/User/Documents/GitHub/practices-/pract12_13_14/stack.c",
+  "output": "CMakeFiles/12_pract.dir/stack.c.obj"
+},
+{
+  "directory": "C:/Users/User/Documents/GitHub/practices-/pract12_13_14/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\12_pract.dir\\student.c.obj -c C:\\Users\\User\\Documents\\GitHub\\practices-\\pract12_13_14\\student.c",
+  "file": "C:/Users/User/Documents/GitHub/practices-/pract12_13_14/student.c",
+  "output": "CMakeFiles/12_pract.dir/student.c.obj"
+}
+]

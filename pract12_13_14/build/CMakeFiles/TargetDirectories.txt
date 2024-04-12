@@ -1,0 +1,3 @@
+C:/Users/User/Documents/GitHub/practices-/pract12_13_14/build/CMakeFiles/12_pract.dir
+C:/Users/User/Documents/GitHub/practices-/pract12_13_14/build/CMakeFiles/edit_cache.dir
+C:/Users/User/Documents/GitHub/practices-/pract12_13_14/build/CMakeFiles/rebuild_cache.dir
