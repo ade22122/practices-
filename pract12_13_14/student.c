@@ -56,17 +56,16 @@ void saveStudentsToBinaryFile(struct Student* students[], int count, const char*
         int gen = strlen(students[i]->name);
         int cen = strlen(students[i]->sex);
         fwrite(&len, sizeof(int), 1, file);
+        fwrite(students[i]->surname, sizeof(char), len, file);
         fwrite(&gen, sizeof(int), 1, file);
-        fwrite(&cen, sizeof(int), 1, file);
-        fwrite(students[i]->surname, sizeof(char), len, file); 
         fwrite(students[i]->name, sizeof(char), gen, file);
+        fwrite(&cen, sizeof(int), 1, file);
         fwrite(students[i]->sex, sizeof(char), cen, file);
-        fwrite (students[i]->sex , sizeof(char), strlen(students[i]->sex), file);  
         fwrite (&students[i]->age , sizeof(int), 1, file);
         fwrite (&students[i]->group , sizeof(int), 1, file);
         fwrite (&students[i]->mathMark , sizeof(float), 1, file);
         fwrite (&students[i]->physicsMark , sizeof(float), 1, file);
-        fwrite (&students[i]->chemistryMark , sizeof(float), 1, file); 
+        fwrite (&students[i]->chemistryMark , sizeof(float), 1, file);
     }
 
     fclose(file);
@@ -101,20 +100,23 @@ struct Student** loadStudentsFromBinaryFile(int* count, const char* filename) {
         int tmpsize;
         
         fread(&tmpsize, sizeof(int), 1, file);
-        students[i]->surname = malloc(tmpsize * sizeof(char));
+        students[i]->surname = malloc(tmpsize * sizeof(char) + 1);
+        students[i]->surname[tmpsize] = '\0';
         fread(students[i]->surname,sizeof(char),tmpsize,file);
-        fread(&tmpsize, sizeof(int), 1, file);
-        students[i]->name = malloc(tmpsize * sizeof(char));
+         fread(&tmpsize, sizeof(int), 1, file);
+        students[i]->name = malloc(tmpsize * sizeof(char) + 1);
+        students[i]->name[tmpsize] = '\0';
         fread(students[i]->name,sizeof(char),tmpsize,file);
-        fread(&tmpsize, sizeof(int), 1, file);
-        students[i]->sex = malloc(tmpsize * sizeof(char));
+         fread(&tmpsize, sizeof(int), 1, file);
+        students[i]->sex = malloc(tmpsize * sizeof(char) + 1);
+        students[i]->sex[tmpsize] = '\0';
         fread(students[i]->sex,sizeof(char),tmpsize,file);
         fread (&students[i]->age , sizeof(int), 1, file);
         fread (&students[i]->group , sizeof(int), 1, file);
         fread (&students[i]->mathMark , sizeof(float), 1, file);
         fread (&students[i]->physicsMark , sizeof(float), 1, file);
-        fread (&students[i]->chemistryMark , sizeof(float), 1, file); 
-          
+        fread (&students[i]->chemistryMark , sizeof(float), 1, file);
+        students[i]->infoOutput=infoOutput;
     }
 
     fclose(file);

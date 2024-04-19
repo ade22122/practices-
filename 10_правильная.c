@@ -106,7 +106,7 @@ void filter_students(struct Tree* node, int min_age, int max_age) {
 
 int main(){
     system("chcp 65001");
-    struct Student* one = initstudent("test2", "test2", "m", 17, 207, 5.0, 5.0, 5.0);
+    struct Student* one = initstudent("test2", "test2", "m", 14, 207, 5.0, 5.0, 5.0);
     struct Student* two = initstudent("test2", "test2", "m", 16, 207, 5.0, 5.0, 2.2);
     struct Student* three = initstudent("test3", "test3", "m", 18, 207, 5.0, 5.0, 5.0);
 
